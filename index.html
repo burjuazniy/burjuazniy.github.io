@@ -36,6 +36,10 @@
         main {
             padding: 0 5% 0 5%;
         }
+
+        small {
+            color: var(--tg-theme-hint-color);
+        }
       
     </style>
     <header>Burjuy WebApp</header>
@@ -64,7 +68,12 @@
     <script>
         let tg = window.Telegram.WebApp;
 
-        tg.MainButton.isVisible = true;
+        tg.MainButton.show();
+        tg.MainButton.onClick(() => {
+            let name = $("#user_name").value;
+            let phone = $("#user_phone").value;
+            tg.close();
+        });
     </script>
 </body>
 </html>
