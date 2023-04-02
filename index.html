@@ -68,6 +68,7 @@
     <script>
         let tg = window.Telegram.WebApp;
 
+        tg.MainButton.text = "Підтвердити";
         tg.MainButton.show();
         tg.MainButton.onClick(() => {
             let name = $("#user_name").value;
