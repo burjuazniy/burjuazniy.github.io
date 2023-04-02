@@ -35,10 +35,33 @@
 
         main {
             padding: 0 5% 0 5%;
+            border-radius: 2em;
+            background-color: var(--th-theme-secondary-bg-color);
         }
 
         small {
             color: var(--tg-theme-hint-color);
+        }
+
+        #submit {
+            position: fixed;
+            bottom: 0;
+            display: block;
+
+            height: 2em;
+            width: 100%;
+            line-height: 2em;
+            text-align: center;
+            
+            border-color: var(--tg-theme-button-color);
+
+            background-color: var(--tg-theme-button-color);
+            color: var(--th-theme-button-text-color);
+        }
+
+        #submit:hover {
+            background-color: var(--tg-theme-secondary-g-color);
+            transition: background-color .2s ease;
         }
       
     </style>
@@ -62,11 +85,14 @@
                 <small id="helpId2" class="form-text text-muted">Введіть номер телефону</small>
     
             </div>
+
         </form>
     </main>
+    <button id="submit">Підвердити</button>
 
     <script>
         let tg = window.Telegram.WebApp;
+        tg.expand();
 
         tg.MainButton.text = "Підтвердити";
         tg.MainButton.show();
