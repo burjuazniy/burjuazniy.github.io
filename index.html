@@ -73,6 +73,13 @@
         tg.MainButton.onClick(() => {
             let name = $("#user_name").value;
             let phone = $("#user_phone").value;
+
+            let data = {
+                name: name,
+                phone: phone
+            }
+            tg.sendData(JSON.stringify(data));
+
             tg.close();
         });
     </script>
