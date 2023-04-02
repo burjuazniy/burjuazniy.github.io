@@ -92,11 +92,10 @@
 
     <script>
         let tg = window.Telegram.WebApp;
+        let submit = $("#submit");
         tg.expand();
 
-        tg.MainButton.text = "Підтвердити";
-        tg.MainButton.show();
-        tg.MainButton.onClick(() => {
+        submit.addEventListener("click", () => {
             let name = $("#user_name").value;
             let phone = $("#user_phone").value;
 
@@ -108,6 +107,7 @@
 
             tg.close();
         });
+        
     </script>
 </body>
 </html>
